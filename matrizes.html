@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Portfólio Matemática</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <span>Portfólio de Matemática 2025</span>
+        <span>Aluno: Gabriel de Domenico de Camargo</span>
+        <span><a href="index.html">Voltar ao início</a></span>
+    </div>
+    <div class="content">
+        <h2>Matrizes</h2>
+        <p>Matrizes são estruturas matemáticas organizadas em forma de tabela.</p>
+        <p>Elas são muito usadas na computação para representar e manipular imagens e modelos 3d e são representadas por A<sub>mxn</sub>, sendo m o número de linhas e n o número de colunas.</p>
+        <p>Abaixo, há um exemplo de matriz 2x3, 2 linhas por 3 colunas:</p>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>a<sub>11</sub></td>
+                    <td>a<sub>12</sub></td>
+                    <td>a<sub>13</sub></td>
+                </tr>
+                <tr>
+                    <td>a<sub>21</sub></td>
+                    <td>a<sub>22</sub></td>
+                    <td>a<sub>23</sub></td>
+                </tr>
+            </table>
+        </div>
+        <p>Como podemos ver, o primeiro valor a<sub>11</sub> representa o valor da linha 1 e coluna 1.</p>
+        <p>O valor a<sub>23</sub> representa o valor da linha 2 e coluna 3.</p>
+        <p>Algo também bem útil é a transposição de matrizes, representada por A<sup>T</sup>. Para fazer a transposição de uma matriz, basta inverter a linha e coluna de cada valor, por exemplo, o valor a<sub>2x3</sub> vai virar o valor a<sub>3x2</sub>.</p>
+        <div class="operation">
+            A<sub>2x3</sub> = 
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>0</td>
+                        <td>1</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>6</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </div>
+            A<sup>T</sup> = 
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>0</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <h2>Matrizes quadradas</h2>
+        <p>As matrizes quadradas, como diz o nome, são as matrizes que tem formato de quadrado, ou seja, o número de linhas é igual o número de colunas, ou vice-versa.</p>
+        <p>Onde está marcado de verde é a diagonal principal. Diagonais só existem em matrizes quadradas.</p>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td class="marcacao">a<sub>11</sub></td>
+                    <td>a<sub>12</sub></td>
+                    <td>a<sub>13</sub></td>
+                </tr>
+                <tr>
+                    <td>a<sub>21</sub></td>
+                    <td class="marcacao">a<sub>22</sub></td>
+                    <td>a<sub>23</sub></td>
+                </tr>
+                <tr>
+                    <td>a<sub>31</sub></td>
+                    <td>a<sub>32</sub></td>
+                    <td class="marcacao">a<sub>33</sub></td>
+                </tr>
+            </table>
+        </div>
+        <p>E aqui temos a diagonal secundária:</p>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>a<sub>11</sub></td>
+                    <td>a<sub>12</sub></td>
+                    <td class="marcacao">a<sub>13</sub></td>
+                </tr>
+                <tr>
+                    <td>a<sub>21</sub></td>
+                    <td class="marcacao">a<sub>22</sub></td>
+                    <td>a<sub>23</sub></td>
+                </tr>
+                <tr>
+                    <td class="marcacao">a<sub>31</sub></td>
+                    <td>a<sub>32</sub></td>
+                    <td>a<sub>33</sub></td>
+                </tr>
+            </table>
+        </div>
+        <p>Existem as matrizes diagonais, onde só existem valores na diagonal, e matrizes triangulares, onde os elementos são zerados acima ou abaixo da diagonal principal.</p>
+        <p>Aqui, uma matriz diagonal, seguido de uma matriz triangular inferior e uma matriz triangular superior.</p>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td class="marcacao">1</td>
+                    <td>0</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td class="marcacao">3</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>0</td>
+                    <td class="marcacao">8</td>
+                </tr>
+            </table>
+        </div>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>9</td>
+                    <td class="marcacao">0</td>
+                    <td class="marcacao">0</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>1</td>
+                    <td class="marcacao">0</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>3</td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </div>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>1</td>
+                    <td>9</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td class="marcacao">0</td>
+                    <td>7</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td class="marcacao">0</td>
+                    <td class="marcacao">0</td>
+                    <td>6</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
