@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Portfólio Matemática</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <span>Portfólio de Matemática 2025</span>
+        <span>Aluno: Gabriel de Domenico de Camargo</span>
+        <span><a href="../index.html">Voltar ao início</a></span>
+    </div>
+    <div class="content">
+        <h2>Criptografia</h2>
+        <p>Algo muito útil e interessante que podemos fazer com matrizes inversas é criptografia. Apenas a pessoa que ter uma matriz chave vai conseguir decifrar a mensagem.</p>
+        <p>Para começar, vamos escolher uma palavra para criptografar e colocar em matriz conforme a tabela:</p>
+        <img src="../imgs/tabelaCriptografia.png">
+        <span>Fonte: Arquivo da professora</span>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>15</td>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>27</td>
+                </tr>
+            </table>
+        </div>
+        <p>A mensagem escolhida é "Ola.". Precisamos fazer com que a mensagem tenha um número de caracteres par e colocar em uma matriz com 2 linhas.</p>
+        <p>Após isso, escolhemos uma matriz chave para codificar a mensagem:</p>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+            </table>
+        </div>
+        <p>Para codificar, basta multiplicarmos nossa matriz com a mensagem pela matriz chave:</p>
+        <div class="operation">
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </div>
+            *
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>15</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>27</td>
+                    </tr>
+                </table>
+            </div>
+            =
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>17</td>
+                        <td>66</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>93</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>Esta matriz é nossa mensagem criptografada. E para resolver, basta fazer o processo contrário, o inverso da matriz chave vezes matriz da mensagem codificada.</p>
+        <p>Primeiramente, fazer o inverso da matriz chave:</p>
+        <div class="operation">
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                </table>
+            </div>
+            =
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>3</td>
+                        <td>-2</td>
+                    </tr>
+                    <tr>
+                        <td>-1</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>Agora, basta multiplicar o inverso da matriz chave com a matriz da mensagem codificada.</p>
+        <div class="operation">
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>3</td>
+                        <td>-2</td>
+                    </tr>
+                    <tr>
+                        <td>-1</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </div>
+            *
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>17</td>
+                        <td>66</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>93</td>
+                    </tr>
+                </table>
+            </div>
+            =
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>3*17 + 18*(-2)</td>
+                        <td>3*66 + 93*(-2)</td>
+                    </tr>
+                    <tr>
+                        <td>-1*17 + 1*18</td>
+                        <td>-1*66 + 1*93</td>
+                    </tr>
+                </table>
+            </div>
+            =
+            <div class="matrix-container">
+                <table class="matrix">
+                    <tr>
+                        <td>15</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>27</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <p>E com isso, chegamos na matriz da mensagem original, que se convertermos de acordo com a tabela de antes, temos a mensagem "Olá."</p>
+    </div>
+</body>
+</html>

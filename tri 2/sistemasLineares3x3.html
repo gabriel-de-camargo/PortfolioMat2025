@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Portfólio Matemática</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='../style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <span>Portfólio de Matemática 2025</span>
+        <span>Aluno: Gabriel de Domenico de Camargo</span>
+        <span><a href="../index.html">Voltar ao início</a></span>
+    </div>
+    <div class="content">
+        <h2>Sistemas Lineares 3x3</h2>
+        <p>Algo novo que aprendemos nesse trimestre foi a resolução de sistemas lineares 3x3 (3 incógnitas).</p>
+        <p>Para começar, vamos ver os tipos de sistema:</p>
+        <p>SPD = Sistema possível determinado (uma solução)</p>
+        <p>SPI = Sistema possível indeterminado (várias soluções)</p>
+        <p>SI = Sistema impossível (nenhuma solução)</p>
+        <p>Sabendo disso, vamos ver como resolver um sistema linear 3x3.</p>
+        <p>É possível representar um sistema na forma de matrizes:</p>
+        <img src="../imgs/matrizEmSistemaLinear.png">
+        <span>Fonte: Arquivo da professora</span>
+        <p>Algo interessante é que, caso o determinante da matriz incompleta for diferente de 0, é um SPD, caso contrário, SPI ou SI.</p>
+        <h2>Escalonamento</h2>
+        <p>Usamos a matriz completa para resolver pelo método de escalonamento.</p>
+        <p>Para começar, iremos resolver este sistema linear 3x3, nosso objetivo é zerar os valores circulados:</p>
+        <img src="../imgs/sistemaLinear3x3.png">
+        <span>Fonte: Imagem editada do Arquivo da professora</span>
+        <p>E para zerar esses valores, fazemos operações com as próprias linhas.</p>
+        <p>Primeiro, transformar o sistema em matriz:</p>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>-1</td>
+                    <td>2</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>-3</td>
+                    <td>-1</td>
+                    <td>7</td>
+                </tr>
+            </table>
+        </div>
+        <p>Primeira operação que podemos fazer é a linha 1 * 2 - linha 2, aí substituimos a linha 2 com o resultado.</p>
+        <p>+2 +4 +8 +10</p>
+        <p>-2 +1 -2 -8</p>
+        <p>0  +5 +6 +2</p>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>-3</td>
+                    <td>-1</td>
+                    <td>7</td>
+                </tr>
+            </table>
+        </div>
+        <p>Agora, vamos fazer a linha 1 * 3 - linha 3.</p>
+        <p>+3 +6 +12 +15</p>
+        <p>-3 +3 +1 -7</p>
+        <p>0 +9 +13 +8</p>
+        <div class="matrix-container">
+            <table class="matrix">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>4</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>9</td>
+                    <td>13</td>
+                    <td>8</td>
+                </tr>
+            </table>
+        </div>
+        <p>Por fim, não podemos usar a linha 1 pois vai adicionar 1 no x da linha 3, então usaremos a linha 2. Nesse caso, faremos linha 2 * 9 - linha 3 * 5:</p>
+        <p>+0 +45 +54 +18</p>
+        <p>-0 -45 -65 -40</p>
+        <p>+0 +0 -11 -22</p>
+        <p>Tudo feito! Temos que 11z = 22, então <b>z = 2</b>. Para achar o valor das outras incógnitas, basta substituir o valor do z nas outras equações, por exemplo, 5y + 6z = 2 = 5y + 12 = 2 = 5y = -10 = <b>y = -2</b></p>
+        <p>E por fim, o valor de x: x + 2y + 4z = 5 = x -4 + 8 = 5 = <b>x = 1</b></p>
+        <p>S = (1, -2, 2)</p>
+        <p>Há também o caso de, na última linha após todas as operações, aparecer uma inconsistência matemática, por exemplo, 0z = 4. Quando acontecer isso, é um sistema impossível, não há solução.</p>
+        <p>E também, quando a última linha estiver toda zerada após as operações, é um sistema possível indeterminado, há várias soluções, e para resolver este, fazemos o seguinte:</p>
+        <p>Podemos colocar uma outra letra para um valor, por exemplo, <b>z = t</b>, e baseado nas outras equações achamos os valores das outras letras baseado na letra que decidimos que seria a base, por exemplo, y + 3z = 2 = y + 3t = 2 = <b>y = -3t + 2</b></p>
+        <p>E no x, por exemplo: x + y + z = 5 = x -3t + 2 + t = 5 = <b>x = 2t + 3</b></p>
+        <p>Então, a solução desse sistema seria S = (2t + 3, -3t + 2, t). Basta substituir t com algum valor numérico e substituir nas outras letras.</p>
+    </div>
+</body>
+</html>
